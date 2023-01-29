@@ -16,6 +16,6 @@ FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 # RUN dotnet publish "YouDontKnowEgypt.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 # FROM base AS final
-WORKDIR /app
-COPY --from=publish /app/publish .
+#WORKDIR /app
+#COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "YouDontKnowEgypt.dll"]
